@@ -1,4 +1,4 @@
-import Animal from '../models/animal.js';
+import GameStat from '../models/gameStat';
 
 export default {
   Query: {

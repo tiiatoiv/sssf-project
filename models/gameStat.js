@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 const gameStatSchema = new Schema({
   GameResult: String,
-  species : {type: mongoose.Types.ObjectId, ref: 'Species'},
+  Agent: String,
 });
 
 export default mongoose.model('GameStat', GameStatSchema);
