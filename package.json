@@ -19,11 +19,11 @@
   "homepage": "https://github.com/tiiatoiv/jelastic-test.git#readme",
   "type": "module",
   "dependencies": {
-    "apollo-server-express": "^2.22.2",
+    "apollo-server-express": "^2.23.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "graphql": "^15.5.0",
-    "mongoose": "^5.12.3"
+    "mongoose": "^5.12.5"
   },
   "devDependencies": {}
 }

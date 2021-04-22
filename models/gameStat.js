@@ -4,8 +4,8 @@ const Schema = mongoose.Schema;
 
 const gameStatSchema = new Schema({
   gameResult: String,
-  agent: String,
-  map: String,
+  agent: {type: mongoose.Types.ObjectId, ref: 'Agent'},
+  map: {type: mongoose.Types.ObjectId, ref: 'Map'},
   kills: String,
   deaths: String,
   assist: String,
