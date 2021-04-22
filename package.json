@@ -20,10 +20,16 @@
   "type": "module",
   "dependencies": {
     "apollo-server-express": "^2.23.0",
+    "babel-loader": "^8.2.2",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "graphql": "^15.5.0",
-    "mongoose": "^5.12.5"
+    "html-webpack-plugin": "^5.3.1",
+    "mongoose": "^5.12.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "webpack": "^5.35.0",
+    "webpack-dev-middleware": "^4.1.0"
   },
   "devDependencies": {}
 }

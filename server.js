@@ -4,6 +4,11 @@ import resolvers from './resolvers/index.js';
 import express from 'express';
 import dotenv from 'dotenv';
 import connectMongo from './db/db.js';
+import webpackMiddleware from "webpack-dev-middleware";
+import webpack from "webpack";
+
+// we will create this file soon
+import webpackConfig from "../webpack.config";
 
 dotenv.config();
 
@@ -20,6 +25,7 @@ dotenv.config();
     });
 
     const app = express();
+    app.use(webpackMiddleware(webpack(webpackConfig)));
 
     server.applyMiddleware({app});
 
