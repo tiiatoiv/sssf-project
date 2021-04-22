@@ -27,7 +27,7 @@ export default gql`
     ): GameStat,
     modifyGameStat(
       id: ID!,
-      gameStat: String,
+      gameResult: String,
       agent: String,
       map: String,
       kills: String,
