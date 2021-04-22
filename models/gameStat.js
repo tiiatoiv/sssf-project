@@ -7,7 +7,7 @@ const gameStatSchema = new Schema({
   Agent: String,
   Map: String,
   Kills: String,
-  Damage: String,
+  Deaths: String,
   Assist: String,
 });
 

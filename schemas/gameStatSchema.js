@@ -12,7 +12,7 @@ export default gql`
       agent: String,
       Map: String,
       Kills: String,
-      Damage: String,
+      Deaths: String,
       Assist: String,
    }
    
@@ -22,7 +22,7 @@ export default gql`
       agent: String!
       Map: String!,
       Kills: String!,
-      Damage: String!,
+      Deaths: String!,
       Assist: String!,
     ): GameStat,
     modifyGameStat(
@@ -31,7 +31,7 @@ export default gql`
       agent: String,
       Map: String,
       Kills: String,
-      Damage: String,
+      Deaths: String,
       Assist: String,
     ): GameStat
    }
