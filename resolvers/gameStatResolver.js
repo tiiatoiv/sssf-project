@@ -5,18 +5,18 @@ export default {
     gamestats: (parent, args) => {
       return GameStat.find();
     },
-    angamestat: (parent, args) => {
+    gamestat: (parent, args) => {
       return GameStat.findById(args.id);
     }
   },
   Mutation: {
     addGameStat: (parent, args) => {
-      console.log('GameStatResolver, addGameStat', args);
+      console.log('gameStatResolver, addGameStat', args);
       const newGameStat = new GameStat(args);
       return newGameStat.save();
     },
     modifyGameStat: (parent, args) => {
-      console.log('GameStatResolver, modifyGameStat', args);
+      console.log('gameStatResolver, modifyGameStat', args);
       return GameStat.findByIdAndUpdate(args.id, args);
     },
   }
