@@ -3,12 +3,12 @@ import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 const gameStatSchema = new Schema({
-  GameResult: String,
-  Agent: String,
-  Map: String,
-  Kills: String,
-  Deaths: String,
-  Assist: String,
+  gameResult: String,
+  agent: String,
+  map: String,
+  kills: String,
+  deaths: String,
+  assist: String,
 });
 
-export default mongoose.model('GameStat', GameStatSchema);
+export default mongoose.model('GameStat', gameStatSchema);

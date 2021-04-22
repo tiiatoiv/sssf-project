@@ -1,4 +1,4 @@
-import GameStat from '../models/gameStat';
+import GameStat from '../models/gameStat.js';
 
 export default {
   Query: {

@@ -10,29 +10,29 @@ export default gql`
       id: ID
       gameResult: String,
       agent: String,
-      Map: String,
-      Kills: String,
-      Deaths: String,
-      Assist: String,
+      map: String,
+      kills: String,
+      deaths: String,
+      assist: String,
    }
    
    extend type Mutation {
     addGameStat(
       gameResult: String!,
       agent: String!
-      Map: String!,
-      Kills: String!,
-      Deaths: String!,
-      Assist: String!,
+      map: String!,
+      kills: String!,
+      deaths: String!,
+      assist: String!,
     ): GameStat,
     modifyGameStat(
       id: ID!,
       gameStat: String,
       agent: String,
-      Map: String,
-      Kills: String,
-      Deaths: String,
-      Assist: String,
+      map: String,
+      kills: String,
+      deaths: String,
+      assist: String,
     ): GameStat
    }
 `;
