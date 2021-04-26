@@ -19,6 +19,8 @@ dotenv.config();
       resolvers,
     });
 
+    const http = require('http');
+
     const app = express();
 
     server.applyMiddleware({app});
