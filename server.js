@@ -4,48 +4,31 @@ import resolvers from './resolvers/index.js';
 import express from 'express';
 import dotenv from 'dotenv';
 import connectMongo from './db/db.js';
-//import {checkAuth} from "./passport/authenticate.js";
+import {checkAuth} from "./passport/authenticate.js";
 import helmet from 'helmet';
 import cors from 'cors';
 
 dotenv.config();
 
-const checkAuth = (req, res) => {
-  return new Promise((resolve, reject) => {
-         const user = {
-           username: 'testUser',
-         };
-       // const user = false;
-        resolve(user);
-     });
-  };
-
-
 (async () => {
   try {
-    const conn = await connectMongo();
-    if (conn) {
-      console.log('Connected successfully.');
-    }
-
-    const server = new ApolloServer({
-      typeDefs: schemas,
-      resolvers,
-      context: async ({req, res}) => {
-        if (req) {
-          const user = await checkAuth(req, res);
-          console.log('app', user);
-          return {
-            req,
-            res,
-            user,
-          };
-        }
-      },
-   
-    });
-
-    const app = express();
+      const con = await connectMongo();
+      if (con) {
+          console.log('connection to db succesful');
+      }
+      const server = new ApolloServer({
+          typeDefs: schemas,
+          resolvers: resolvers,
+          context: async ({req, res}) => {
+              try {
+                  const user = await checkAuth(req, res);
+                  return {req, res, user};
+              } catch (error) {
+                  console.log('context error:', error);
+              }
+          }
+      });
+      const app = express();
 
     server.applyMiddleware({app});
 

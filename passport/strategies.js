@@ -1,34 +1,34 @@
 import passport from 'passport'
-import {Strategy} from 'passport-local'
+import {Strategy as LocalStrategy} from 'passport-local'
 import bcrypt from 'bcrypt';
 import User from '../models/user.js'
-import {Strategy as JWTStrategy, ExtractJwt} from 'passport-jwt';
+import {Strategy as JwtStrategy, ExtractJwt} from 'passport-jwt';
 
-passport.use(new Strategy(
+passport.use(new LocalStrategy(
     async (username, password, done) => {
         try {
-            const user = await User.findOne({username});
+            const user = await User.findOne({ username });
 
             if (!user || !(await bcrypt.compare(password, user.password))) {
-                return done(null, false, {message: 'Invalid credentials'});
+                return done(null, false, { message: 'Invalid Credentials' });
             }
 
             const strippedUser = user.toObject();
             delete strippedUser.password;
 
-            return done(null, strippedUser, {message: 'Logged in successfully!'});
+            return done(null, strippedUser, { message: 'Authentication Successful!' });
         } catch (error) {
             return done(error);
         }
     }
 ));
 
-passport.use(new JWTStrategy({
+passport.use(new JwtStrategy({
     jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-    secretOrKey: 'asd123'
-}, async (jwtPayload, done) => {
+    secretOrKey: process.env.JWT_SECRET,
+}, async (payload, done) => {
     try {
-        const user = await User.findOne({username: jwtPayload.username});
+        const user = await User.findOne({ username: payload.username }).populate('games');
 
         if (user) return done(null, user);
 
