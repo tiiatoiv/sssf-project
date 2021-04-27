@@ -20,7 +20,7 @@ export default gql`
     extend type Mutation {
         register(
             username: String!,
-            password: String!
+            password: String!,
             ): User
     }
 `;

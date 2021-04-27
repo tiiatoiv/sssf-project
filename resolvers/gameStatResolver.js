@@ -11,8 +11,12 @@ export default {
     }
   },
   Mutation: {
-    addGameStat: (parent, args) => {
-      
+    addGameStat: (parent, args, {user}) => {
+
+      if (!user) {
+        throw new AuthenticationError('You have not logged in')
+    }
+
       console.log('gameStatResolver, addGameStat', args);
       const newGameStat = new GameStat(args);
       return newGameStat.save();

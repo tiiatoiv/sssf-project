@@ -21,6 +21,14 @@ dotenv.config();
       const server = new ApolloServer({
           typeDefs: schemas,
           resolvers: resolvers,
+          context: async ({req, res}) => {
+            try {
+                const user = await checkAuth(req, res);
+                return {req, res, user};
+            } catch (error) {
+                console.log('context error:', error);
+            }
+        }
       });
       const app = express();
 
