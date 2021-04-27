@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 const gameStatSchema = new Schema({
+  userID: String,
   gameResult: String,
   agent: String,
   map : {type: mongoose.Types.ObjectId, ref: 'Map'},

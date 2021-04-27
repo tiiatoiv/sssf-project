@@ -7,7 +7,8 @@ export default gql`
    }
    
    type GameStat {
-      id: ID
+      id: ID,
+      userID: String,
       gameResult: String,
       agent: String,
       map: Map,
@@ -18,6 +19,7 @@ export default gql`
    
    extend type Mutation {
     addGameStat(
+      userID: String!,
       gameResult: String!,
       agent: String!
       map: ID!,
@@ -27,6 +29,7 @@ export default gql`
     ): GameStat,
     modifyGameStat(
       id: ID!,
+      userID: String,
       gameResult: String,
       agent: String,
       map: ID,

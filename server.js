@@ -12,6 +12,8 @@ dotenv.config();
 
 (async () => {
   try {
+
+    dotenv.config();
       const con = await connectMongo();
       if (con) {
           console.log('connection to db succesful');
@@ -19,14 +21,6 @@ dotenv.config();
       const server = new ApolloServer({
           typeDefs: schemas,
           resolvers: resolvers,
-          context: async ({req, res}) => {
-              try {
-                  const user = await checkAuth(req, res);
-                  return {req, res, user};
-              } catch (error) {
-                  console.log('context error:', error);
-              }
-          }
       });
       const app = express();
 

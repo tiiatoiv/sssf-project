@@ -11,18 +11,13 @@ export default {
     }
   },
   Mutation: {
-    addGameStat: (parent, args, {user}) => {
-      if(!user) {
-        throw new AuthenticationError('You have not logged in')
-    }
+    addGameStat: (parent, args) => {
+      
       console.log('gameStatResolver, addGameStat', args);
       const newGameStat = new GameStat(args);
       return newGameStat.save();
     },
-    modifyGameStat: (parent, args, {user}) => {
-      if(!user) {
-        throw new AuthenticationError('You have not logged in')
-    }
+    modifyGameStat: (parent, args) => {
       console.log('gameStatResolver, modifyGameStat', args);
       return GameStat.findByIdAndUpdate(args.id, args);
     },
