@@ -19,6 +19,7 @@
   "homepage": "https://github.com/tiiatoiv/jelastic-test.git#readme",
   "type": "module",
   "dependencies": {
+    "apollo-server-errors": "^2.5.0",
     "apollo-server-express": "^2.23.0",
     "babel-loader": "^8.2.2",
     "bcrypt": "^5.0.1",
@@ -26,6 +27,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "graphql": "^15.5.0",
+    "helmet": "^4.5.0",
     "html-webpack-plugin": "^5.3.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.12.5",
