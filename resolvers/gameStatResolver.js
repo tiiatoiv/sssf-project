@@ -8,6 +8,10 @@ export default {
     },
     gamestat: (parent, args) => {
       return GameStat.findById(args.id);
+    },
+    gameStatsByUser: (parent, args) => {
+      console.log('GameStatsbyuserID', args);
+      return GameStat.find().where('userID').equals(args.id);
     }
   },
   Mutation: {

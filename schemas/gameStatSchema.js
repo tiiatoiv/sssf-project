@@ -1,9 +1,11 @@
 import {gql} from 'apollo-server-express';
 
 export default gql`
+
    extend type Query {
      gamestats: [GameStat],
      gamestat(id: ID!): GameStat
+     gameStatsByUser(id: String): [GameStat]
    }
    
    type GameStat {

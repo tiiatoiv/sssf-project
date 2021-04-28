@@ -13,9 +13,11 @@ export default {
             return User.findById(args.id);
         },
         login: async(parent, args, {req, res}) => {
+            console.log("TOKA");
             req.body = args;
             try {
                 const response = await login(req, res);
+                console.log("TÄMÄ RESP", response);
                 return {
                     id: response.user._id,
                     username: response.user.username,
@@ -28,6 +30,7 @@ export default {
     },
     Mutation: {
         register: async (parent,args) => {
+            console.log("KOLM");
             try {
                 const hash = await bcrypt.hash(args.password, 12);
                 const userWithHash = {
@@ -36,6 +39,7 @@ export default {
                 };
                 const newUser = new User(userWithHash);
                 const result = await newUser.save();
+                console.log("TÄMÄ RESP", result);
                 return result;
             } catch(err) {
                 throw new UserInputError(err.message);
