@@ -11,12 +11,13 @@ export default {
     },
     gameStatsByUser: (parent, args) => {
       console.log('GameStatsbyuserID', args);
-      return GameStat.find().where('userID').equals(args.id);
+      console.log("TÄMÄ HAKU");
+      return GameStat.find().where('userID').equals(args.userID);
     }
   },
   Mutation: {
     addGameStat: (parent, args, {user}) => {
-
+      console.log("TÄMÄ UUSI", user, args);
       if (!user) {
         throw new AuthenticationError('You have not logged in')
     }

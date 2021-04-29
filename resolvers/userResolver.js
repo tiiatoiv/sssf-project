@@ -12,6 +12,14 @@ export default {
             console.log(user);
             return User.findById(args.id);
         },
+        users: (parent, args) => {
+            return User.find();
+          },
+        userbyusername: (parent, args) => {
+        console.log('userByUsername', args);
+        console.log("TÄMÄ HAKU");
+        return User.find().where('username').equals(args.userID);
+          },
         login: async(parent, args, {req, res}) => {
             console.log("TOKA");
             req.body = args;

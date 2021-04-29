@@ -4,5 +4,6 @@ import categoryResolver from './categoryResolver.js';
 import gameStatResolver from './gameStatResolver.js';
 import mapResolver from './mapResolver.js';
 import userResolver from './userResolver.js';
+import userInfoResolver from './userInfoResolver.js';
 
-export default [animalResolver, speciesResolver, categoryResolver, gameStatResolver, mapResolver, userResolver];
+export default [animalResolver, speciesResolver, categoryResolver, gameStatResolver, mapResolver, userResolver, userInfoResolver];

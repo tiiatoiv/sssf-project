@@ -8,6 +8,11 @@ export default gql`
         id: ID!
         token: String
     }
+
+    extend type Query {
+        users: [User],
+        userbyusername(username: String!): User,
+      }
     
     extend type Query {
         user(id: ID!): User
