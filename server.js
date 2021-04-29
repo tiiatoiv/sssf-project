@@ -7,6 +7,7 @@ import connectMongo from './db/db.js';
 import {checkAuth} from "./passport/authenticate.js";
 import helmet from 'helmet';
 import cors from 'cors';
+const PORT = process.env.PORT || 3000;
 
 dotenv.config();
 
@@ -36,9 +37,9 @@ dotenv.config();
 
     server.applyMiddleware({app});
 
-    app.listen({port: 80}, () =>
+    app.listen({port: PORT}, () =>
         console.log(
-            `🚀 Server ready at http://localhost:80${server.graphqlPath}`),
+            `🚀 Server ready at port ${PORT}`),
     );
   } catch (e) {
     console.log('server error: ' + e.message);
