@@ -36,9 +36,9 @@ dotenv.config();
 
     server.applyMiddleware({app});
 
-    app.listen({port: 3000}, () =>
+    app.listen({port: 80}, () =>
         console.log(
-            `🚀 Server ready at http://localhost:3000${server.graphqlPath}`),
+            `🚀 Server ready at http://localhost:80${server.graphqlPath}`),
     );
   } catch (e) {
     console.log('server error: ' + e.message);
