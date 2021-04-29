@@ -24,6 +24,7 @@ dotenv.config();
           context: async ({req, res}) => {
             try {
                 const user = await checkAuth(req, res);
+                console.log("TÄMÄ POUS", user);
                 return {req, res, user};
             } catch (error) {
                 console.log('context error:', error);

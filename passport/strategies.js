@@ -9,6 +9,7 @@ passport.use(new Strategy(
     async (username, password, done) => {
         try {
             const user = await User.findOne({username});
+            console.log('TÄMÄ STRA', user);
 
             if (!user || !(await bcrypt.compare(password, user.password))) {
                 return done(null, false, {message: 'Invalid credentials'});
@@ -26,10 +27,11 @@ passport.use(new Strategy(
 
 passport.use(new JWTStrategy({
     jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-    secretOrKey: 'asd123'
+    secretOrKey: 'jotainjee'
 }, async (jwtPayload, done) => {
     try {
         const user = await User.findOne({username: jwtPayload.username});
+        console.log('TÄMÄ STRA', user);
 
         if (user) return done(null, user);
 

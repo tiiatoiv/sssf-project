@@ -12,7 +12,7 @@ export default gql`
       id: ID,
       userID: String,
       gameResult: String,
-      agent: String,
+      agent: Agent,
       map: Map,
       kills: String,
       deaths: String,
@@ -23,7 +23,7 @@ export default gql`
     addGameStat(
       userID: String!,
       gameResult: String!,
-      agent: String!
+      agent: ID!
       map: ID!,
       kills: String!,
       deaths: String!,
@@ -33,7 +33,7 @@ export default gql`
       id: ID!,
       userID: String,
       gameResult: String,
-      agent: String,
+      agent: ID,
       map: ID,
       kills: String,
       deaths: String,

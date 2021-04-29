@@ -5,6 +5,7 @@ import gameStatSchema from './gameStatSchema.js';
 import userSchema from './userSchema.js';
 import mapSchema from './mapSchema.js';
 import userInfoSchema from './userInfoSchema.js';
+import agentSchema from './agentSchema.js';
 import {gql} from 'apollo-server-express';
 
 const linkSchema = gql`
@@ -25,4 +26,5 @@ export default [
   mapSchema,
   userSchema,
   userInfoSchema,
+  agentSchema,
 ];
