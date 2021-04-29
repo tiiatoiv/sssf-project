@@ -10,20 +10,20 @@ export default gql`
    
    type UserInfo {
       id: ID,
-      userID: User,
+      userID: String,
       main: String,
       description: String,
    }
    
    extend type Mutation {
     addUserInfo(
-        userID: User,
+        userID: String,
         main: String,
         description: String,
     ): UserInfo,
     modifyUserInfo(
       id: ID!,
-      userID: User,
+      userID: String,
       main: String,
       description: String,
     ): UserInfo
