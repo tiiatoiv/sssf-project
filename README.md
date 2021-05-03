@@ -4,6 +4,7 @@
 ### Game Stats App for Valorant
 
 Backend endpoint running at: https://sssfprojectbackend.herokuapp.com/graphql
+
 Application is running at https://sssffrontend.herokuapp.com/
 
 
