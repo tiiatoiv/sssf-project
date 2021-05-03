@@ -67,7 +67,7 @@ mutation {
 
 ```
 
-#####Modidy gamestat
+###### Modidy gamestat (id must be the ID of the game stat you want to edit. Other fields you can edit freely.)
 
 ```
 
