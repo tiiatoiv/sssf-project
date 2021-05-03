@@ -20,7 +20,7 @@ export default gql`
    }
    
    extend type Mutation {
-    deleteGameStat(id: ID): GameStat,
+    deleteGameStat(id: ID!): GameStat,
     addGameStat(
       userID: String!,
       gameResult: String!,
