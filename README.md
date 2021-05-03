@@ -35,8 +35,6 @@ query {
 
 ###### Add new game stat (when submitting agent and map you need to give ID.
 
-List of agent and map ID:s to use:
-
 
 
 ```
@@ -69,7 +67,7 @@ mutation {
 
 ```
 
-###### Modidy gamestat (id must be the ID of the game stat you want to edit. Other fields you can edit freely.)
+###### Modify gamestat (id must be the ID of the game stat you want to edit. Other fields you can edit freely.)
 
 ```
 
