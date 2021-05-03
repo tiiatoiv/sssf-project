@@ -122,7 +122,7 @@ query {
 
 ```
 
-###### Get gamestat by id
+###### Get gamestat by userID
 
 ```
 query {
