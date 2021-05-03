@@ -3,13 +3,13 @@
 
 ### Game stat app for Valorant.
 
-### Backend endpoint running at: https://sssfprojectbackend.herokuapp.com/graphql
-### Application is running at https://sssffrontend.herokuapp.com/
+Backend endpoint running at: https://sssfprojectbackend.herokuapp.com/graphql
+Application is running at https://sssffrontend.herokuapp.com/
 
 
 #### Example queries (all mutations/ queries are behind authentication)
 
-###### Register
+Register
 
 ```
 mutation {
@@ -21,7 +21,7 @@ mutation {
 
 ```
 
-###### Login 
+Login 
 
 ```
 query {
@@ -33,7 +33,7 @@ query {
 }
 ```
 
-###### Add new game stat (when submitting agent and map you need to give ID.
+Add new game stat (when submitting agent and map you need to give ID.
 
 
 
@@ -67,7 +67,7 @@ mutation {
 
 ```
 
-###### Modify gamestat (id must be the ID of the game stat you want to edit. Other fields you can edit freely.)
+Modify gamestat (id must be the ID of the game stat you want to edit. Other fields you can edit freely.)
 
 ```
 
@@ -100,7 +100,7 @@ mutation {
 }
 ```
 
-###### Gamestats
+Gamestats
 
 ```
 query {
@@ -122,7 +122,7 @@ query {
 
 ```
 
-###### Get gamestat by userID
+Get gamestat by userID
 
 ```
 query {
