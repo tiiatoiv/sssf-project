@@ -1,7 +1,5 @@
 
-# Sssf project back end
-
-### Game Stats App for Valorant
+# Game Stats App for Valorant
 
 Backend endpoint running at: https://sssfprojectbackend.herokuapp.com/graphql
 
