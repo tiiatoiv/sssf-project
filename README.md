@@ -1,11 +1,11 @@
 
 # Sssf project back end
 
-## Game stat app for Valorant.
+### Game stat app for Valorant.
 
 ### Backend endpoint running at: https://sssfprojectbackend.herokuapp.com/graphql
 
-##Example queries
+### Example queries
 
 Add new game stat (when submitting agent and map you need to give ID. List of agent and map ID:s to use:
 
