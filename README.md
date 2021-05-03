@@ -34,7 +34,7 @@ query {
 }
 ```
 
-Add new game stat (when submitting agent and map you need to give ID.
+Add new game stat (when submitting agent and map you need to give proper ID's)
 
 
 
