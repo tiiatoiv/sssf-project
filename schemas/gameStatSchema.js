@@ -5,7 +5,7 @@ export default gql`
    extend type Query {
      gamestats: [GameStat],
      gamestat(id: ID!): GameStat
-     gamestatsbyuser(userID: String!): [GameStat]
+     gameStatsByUser(userID: String!): [GameStat]
    }
    
    type GameStat {
