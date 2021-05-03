@@ -5,10 +5,35 @@
 
 ### Backend endpoint running at: https://sssfprojectbackend.herokuapp.com/graphql
 
-### Example queries
+### Example queries (all mutations/queries are behind authentication so you need to register an account)
+
+Register
+
+```
+mutation {
+        register(username: "YOURUSERNAME", password: "YOURPASSWORD,
+            ) {
+            username
+    }
+}
 
 Add new game stat (when submitting agent and map you need to give ID. List of agent and map ID:s to use:
 
+```
+
+Login 
+
+```
+query {
+    login(username:"YOURUSERNAME, password:"YOURPASSWORD"
+            ) {
+            username
+            token
+            }
+}
+```
+
+Add new game stat
 
 ```
 mutation {
