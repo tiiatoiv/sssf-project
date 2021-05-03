@@ -19,7 +19,7 @@ mutation {
 
 ```
 
-Login 
+###### Login 
 
 ```
 query {
@@ -31,8 +31,11 @@ query {
 }
 ```
 
-Add new game stat (when submitting agent and map you need to give ID.
+###### Add new game stat (when submitting agent and map you need to give ID.
+
 List of agent and map ID:s to use:
+
+
 
 ```
 mutation {
