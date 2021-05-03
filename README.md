@@ -7,7 +7,7 @@
 ### Application is running at https://sssffrontend.herokuapp.com/
 
 
-#### Example queries (all mutations/queries are behind authentication so you need to register an account)
+#### Example queries (all mutations/ queries are behind authentication)
 
 ###### Register
 
