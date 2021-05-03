@@ -5,7 +5,7 @@ export default gql`
    extend type Query {
      gamestats: [GameStat],
      gamestat(id: ID!): GameStat
-     gameStatsByUser(userID: String!): [GameStat]
+     gamestatsbyuser(userID: String!): [GameStat]
    }
    
    type GameStat {
@@ -20,6 +20,7 @@ export default gql`
    }
    
    extend type Mutation {
+    deleteGameStat(id: ID): GameStat,
     addGameStat(
       userID: String!,
       gameResult: String!,

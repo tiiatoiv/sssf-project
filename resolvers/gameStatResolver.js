@@ -9,7 +9,7 @@ export default {
     gamestat: (parent, args) => {
       return GameStat.findById(args.id);
     },
-    gameStatsByUser: (parent, args) => {
+    gamestatsbyuser: (parent, args) => {
       console.log('GameStatsbyuserID', args);
       console.log("TÄMÄ HAKU");
       return GameStat.find().where('userID').equals(args.userID);
@@ -27,6 +27,15 @@ export default {
     modifyGameStat: (parent, args) => {
       console.log('gameStatResolver, modifyGameStat', args);
       return GameStat.findByIdAndUpdate(args.id, args);
+    },
+    deleteGameStat: (parent, args, {user}) => {
+      console.log('delete stat');
+      if (!user) {
+          throw new AuthenticationError('You have not logged in')
+      }
+          const gamestat = GameStat.findById(args.id);
+          console.log('delete stat', gamestat);
+          return GameStat.findByIdAndDelete(args.id);
     },
   }
 };
