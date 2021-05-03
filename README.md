@@ -17,8 +17,6 @@ mutation {
     }
 }
 
-Add new game stat (when submitting agent and map you need to give ID. List of agent and map ID:s to use:
-
 ```
 
 Login 
@@ -33,7 +31,8 @@ query {
 }
 ```
 
-Add new game stat
+Add new game stat (when submitting agent and map you need to give ID.
+List of agent and map ID:s to use:
 
 ```
 mutation {
