@@ -9,7 +9,7 @@ export default {
     gamestat: (parent, args) => {
       return GameStat.findById(args.id);
     },
-    gamestatsbyuser: (parent, args) => {
+    gameStatsByUser: (parent, args) => {
       console.log('GameStatsbyuserID', args);
       console.log("TÄMÄ HAKU");
       return GameStat.find().where('userID').equals(args.userID);
