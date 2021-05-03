@@ -7,7 +7,7 @@
 
 ### Example queries (all mutations/queries are behind authentication so you need to register an account)
 
-Register
+###### Register
 
 ```
 mutation {
