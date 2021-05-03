@@ -4,6 +4,7 @@
 ### Game stat app for Valorant.
 
 ### Backend endpoint running at: https://sssfprojectbackend.herokuapp.com/graphql
+### Application is running at https://sssffrontend.herokuapp.com/
 
 #### Example queries (all mutations/queries are behind authentication so you need to register an account)
 
