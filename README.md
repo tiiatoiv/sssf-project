@@ -8,7 +8,7 @@ Backend endpoint running at: https://sssfprojectbackend.herokuapp.com/graphql
 Application is running at https://sssffrontend.herokuapp.com/
 
 
-### Example queries (all mutations/ queries are behind authentication)
+## Example queries (all mutations/ queries are behind authentication)
 
 Register
 
