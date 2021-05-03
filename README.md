@@ -100,4 +100,46 @@ mutation {
 }
 ```
 
+###### Gamestats
+
+```
+query {
+  gamestats {
+    userID
+    gameResult
+    agent {
+        agentName
+        agentType
+    map {
+      id
+      mapName
+    }
+    kills
+    deaths
+    assist
+  }
+}
+
+```
+
+###### Get gamestat by id
+
+```
+query {
+  gameStatsByUser(userID:"USERNAME") {
+    userID
+    gameResult
+    agent {
+        agentName
+    map {
+      id
+      mapName
+    }
+    kills
+    deaths
+    assist
+  }
+}
+
+```
 
