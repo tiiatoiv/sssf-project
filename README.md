@@ -67,3 +67,37 @@ mutation {
 
 ```
 
+#####Modidy gamestat
+
+```
+
+mutation {
+  modifyGameStat(
+  id: *GAME STAT'S ID*,
+  userID:"YOURUSERNAME",
+  gameResult:"e.q. 13-3",
+  agent: "608a90c517651226b49f2b28",
+  map: "608689956696eac51a51b543",
+  kills: "e.g. 10",
+  deaths: "10",
+  assist: "10") {
+    id
+    userID
+    gameResult
+    agent {
+      id
+      agentName
+      agentType
+  	}
+    map {
+      id
+      mapName
+    }
+    kills
+    deaths
+    assist
+  }
+}
+```
+
+
