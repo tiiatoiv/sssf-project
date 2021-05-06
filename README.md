@@ -127,3 +127,22 @@ query {
 
 ```
 
+Add map
+```
+mutation {
+  addMap(mapName:"mapname") {
+    id
+    mapName
+}
+}
+```
+
+Add agent
+```
+mutation {
+  addAgent(agentName:"agentname", agentType:"agenttype") {
+    id
+    agentName
+    agentType
+}
+}
