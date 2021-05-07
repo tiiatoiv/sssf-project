@@ -32,6 +32,15 @@ query {
 }
 ```
 
+Get user by username
+```
+query {
+        userbyusername(username: String!) {
+        username
+        }
+}
+```
+
 Add new game stat (when submitting agent and map you need to give proper ID's)
 
 
@@ -137,6 +146,26 @@ mutation {
 }
 ```
 
+Get maps
+```
+query {
+  maps {
+    id
+    mapName
+        }
+}
+```
+
+Get map by ID
+```
+query {
+  map(id:MAPID) {
+    id
+    mapName
+        }
+}
+```
+
 Add agent
 ```
 mutation {
@@ -146,3 +175,26 @@ mutation {
     agentType
 }
 }
+```
+
+Get agents
+```
+query {
+  agents {
+    id
+    agentName
+    agentType
+        }
+}
+```
+
+Get agent by ID
+```
+query {
+  agent(id:MAPID) {
+    id
+    agentName
+    agentType
+        }
+}
+```
