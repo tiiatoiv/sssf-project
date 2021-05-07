@@ -135,6 +135,8 @@ query {
 }
 
 ```
+### Map and agent queries/mutations
+#### Not included in frontend
 
 Add map
 ```
