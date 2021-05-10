@@ -5,8 +5,10 @@ Backend GraphQL endpoint running at: https://sssfprojectbackend.herokuapp.com/gr
 
 Application is running at https://sssffrontend.herokuapp.com/
 
+What has changed after presentations:
+Added a few missing mutations to the README.md file that were on backend but not listed here. Started working on form validation based on the feedback from presentations, but couldn't really finish it so that it'd work perfectly, so didn't push the code to the git yet. (i will maybe add it later once it's finished)
 
-## Example queries (all mutations/ queries are behind authentication)
+## Example queries (all mutations/ queries are behind authentication except map and agent)
 
 Register
 
