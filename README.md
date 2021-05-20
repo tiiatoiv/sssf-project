@@ -2,6 +2,7 @@
 # SSSF Backend
 ## Game Stats App for Valorant
 Backend GraphQL endpoint running at: https://sssfprojectbackend.herokuapp.com/graphql
+Connected to MongoDB Atlas
 
 Application is running at https://sssffrontend.herokuapp.com/
 
